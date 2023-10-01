@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "453904115775",
+    "project_id": "pcv-apk",
+    "storage_bucket": "pcv-apk.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:453904115775:android:a85bf3e9154ea2ba75b08a",
+        "android_client_info": {
+          "package_name": "com.pcv"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCO2m1pFNkLOjrj-n5-smyV4DNuq1A1laI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
