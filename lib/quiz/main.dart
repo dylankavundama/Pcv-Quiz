@@ -29,12 +29,11 @@ class _MyAppState extends State<MyApp> {
   RewardedAd? _rewardedAd;
 
   final String _adUnitId = Platform.isAndroid
-   //   ? 'ca-app-pub-7329797350611067/4088353663'
-     // : 'ca-app-pub-7329797350611067/4088353663';
+      //   ? 'ca-app-pub-7329797350611067/4088353663'
+      // : 'ca-app-pub-7329797350611067/4088353663';
 
-     ?''
-     :
-     '';
+      ? 'ca-app-pub-7329797350611067/5705114635'
+      : 'ca-app-pub-7329797350611067/5705114635';
 //Id app ca-app-pub-3940256099942544~3347511713
   @override
   void initState() {

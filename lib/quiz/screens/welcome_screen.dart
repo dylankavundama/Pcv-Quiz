@@ -1,14 +1,9 @@
 import 'dart:io';
-
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
-
 import 'package:quiz_app/quiz/screens/quiz_screen/quiz_screen.dart';
-
 import '../controllers/quiz_controller.dart';
-
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({Key? key}) : super(key: key);
   static const routeName = '/welcome_screen';
@@ -126,7 +121,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                         child: Column(
                       children: [
                         Text(
-                          'Entré Votre Nom',
+                          'Entré votre nom',
                           style: Theme.of(context)
                               .textTheme
                               .headline6!
@@ -151,7 +146,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                         controller: _nameController,
                         style: const TextStyle(color: Colors.black),
                         decoration: const InputDecoration(
-                            labelText: 'Votre Nom',
+                            labelText: 'Votre nom',
                             labelStyle: TextStyle(color: Colors.black),
                             border: OutlineInputBorder(
                                 borderSide: BorderSide(width: 3),

@@ -1,6 +1,5 @@
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:native_notify/native_notify.dart';
-import 'package:quiz_app/constants/color.dart';
 import 'package:quiz_app/principalPage.dart';
 import 'package:flutter/material.dart';
 
@@ -20,8 +19,6 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
-
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
