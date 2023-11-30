@@ -27,7 +27,7 @@ class VideoListWidget extends StatefulWidget {
 
 class _VideoListWidgetState extends State<VideoListWidget> {
   @override
-  @override
+
   BannerAd? _bannerAd;
 
   final String _adUnitId = Platform.isAndroid

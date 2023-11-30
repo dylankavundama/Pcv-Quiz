@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
+  MobileAds.instance.initialize();
   NativeNotify.initialize(
       3586,
       'c5ybwcdUrJia8mUPdq1JbX',

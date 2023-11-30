@@ -113,8 +113,8 @@ class _VideoDisplayPageState extends State<VideoDisplayPage> {
   RewardedInterstitialAd? _rewardedInterstitialAd;
 
   final String _adUnitId = Platform.isAndroid
-      ? 'ca-app-pub-7329797350611067/7698379893'
-      : 'ca-app-pub-7329797350611067/7698379893';
+      ? 'ca-app-pub-7329797350611067/6682586161'
+      : 'ca-app-pub-7329797350611067/6682586161';
 
   void _startNewGame() {
     _loadAd();
@@ -135,8 +135,10 @@ class _VideoDisplayPageState extends State<VideoDisplayPage> {
   BannerAd? _bannerAd;
 
   final String _adUnitIdd = Platform.isAndroid
-      ? 'ca-app-pub-7329797350611067/7630097138'
-      : 'ca-app-pub-7329797350611067/7630097138';
+   !//   ? 'ca-app-pub-7329797350611067/7630097138'
+      //: 'ca-app-pub-7329797350611067/7630097138';
+      ? ''
+      :'';
 
 
   void _loadAd() async {
@@ -269,21 +271,21 @@ class _VideoDisplayPageState extends State<VideoDisplayPage> {
                   },
                   child: Text("LAISSER UN COMMENTER"),),),
 
-                              Stack(
-              children: [
-                if (_bannerAd != null)
+                             Stack(
+               children: [
+               if (_bannerAd != null)
                   Align(
-                    alignment: Alignment.bottomCenter,
-                    child: SafeArea(
-                      child: SizedBox(
-                        width: _bannerAd!.size.width.toDouble(),
-                        height: _bannerAd!.size.height.toDouble(),
-                        child: AdWidget(ad: _bannerAd!),
-                      ),
+                  alignment: Alignment.bottomCenter,
+                   child: SafeArea(
+                   child: SizedBox(
+                      width: _bannerAd!.size.width.toDouble(),
+                    height: _bannerAd!.size.height.toDouble(),
+                       child: AdWidget(ad: _bannerAd!),
                     ),
-                  ),
-              ],
-            ),
+               ),
+                ),
+            ],
+             ),
         ],
       ),
     );
