@@ -1,8 +1,6 @@
 import 'package:quiz_app/about/timer.dart';
-
 import 'package:flutter/material.dart';
 
-/// A simple class that displays an alert prompt prior to showing an ad.
 class AdDialog extends StatefulWidget {
   final VoidCallback showAd;
 

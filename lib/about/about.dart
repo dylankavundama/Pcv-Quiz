@@ -1,22 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_app/about/info.dart';
 import 'package:quiz_app/about/policy.dart';
-import 'package:quiz_app/about/timer.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:share/share.dart';
-
 import '../constants/color.dart';
-
 class About extends StatefulWidget {
   @override
   State<About> createState() => _AboutState();
 }
 
 class _AboutState extends State<About> {
-  final CountdownTimer _countdownTimer = CountdownTimer(10);
-  //var _showWatchVideoButton = false;
-  //var _coins = 0;
-
   @override
   void initState() {
     super.initState();
@@ -24,9 +17,7 @@ class _AboutState extends State<About> {
     _startNewGame();
   }
 
-  void _startNewGame() {
-    _countdownTimer.start();
-  }
+  void _startNewGame() {}
 
   @override
   Widget build(BuildContext context) {
@@ -72,8 +63,6 @@ class _AboutState extends State<About> {
                               style: Theme.of(context).textTheme.titleLarge,
                             ),
                           ),
-                          IconButton(
-                              onPressed: () {}, icon: Icon(Icons.exit_to_app))
                         ],
                       ),
                     ],
@@ -121,7 +110,7 @@ class _AboutState extends State<About> {
                 ListTile(
                   onTap: () {
                     launch(
-                     'https://play.google.com/store/apps/details?id=com.pcv');
+                        'https://play.google.com/store/apps/details?id=com.pcv');
                   },
                   title: const Text(
                     'Commentaire',
@@ -171,24 +160,6 @@ class _AboutState extends State<About> {
                     color: Colors.black,
                   ),
                 ),
-                ListTile(
-                  onTap: () {
-                    launch(
-                        'https://play.google.com/store/apps/details?id=com.easykivu&pcampaignid=web_share');
-                  },
-                  title: const Text(
-                    'Mis a jour',
-                    style: TextStyle(color: Colors.black),
-                  ),
-                  leading: const Icon(
-                    Icons.update,
-                    color: Colors.black,
-                  ),
-                  trailing: const Icon(
-                    Icons.arrow_forward,
-                    color: Colors.black,
-                  ),
-                ),
               ],
             ),
           ),
@@ -234,7 +205,6 @@ class _AboutState extends State<About> {
 
   @override
   void dispose() {
-    _countdownTimer.dispose();
     super.dispose();
   }
 }
