@@ -1,3 +1,7 @@
+import 'dart:async';
+import 'dart:io';
+
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:quiz_app/about/about.dart';
 import 'package:quiz_app/constants/color.dart';
 import 'package:quiz_app/home.dart';
@@ -23,14 +27,92 @@ class _principalPageState extends State<principalPage> {
     About(),
   ];
   @override
-  void _startNewGame() {}
-
   Widget _launchStatus(BuildContext context, AsyncSnapshot<void> snapshot) {
     if (snapshot.hasError) {
       return Text('Error: ${snapshot.error}');
     } else {
       return const Text('');
     }
+  }
+InterstitialAd? _interstitialAd;
+  final _gameLength = 5;
+  late var _counter = _gameLength;
+//intertial rj
+  final String _adUnitIdd = Platform.isAndroid
+      ? 'ca-app-pub-7329797350611067/8200194655'
+      : 'ca-app-pub-7329797350611067/8200194655';
+  @override
+  void _startNewGame() {
+    setState(() => _counter = _gameLength);
+
+    _loadAdd();
+    _starTimer();
+  }
+
+  void _loadAdd() {
+    InterstitialAd.load(
+        adUnitId: _adUnitIdd,
+        request: const AdRequest(),
+        adLoadCallback: InterstitialAdLoadCallback(
+          onAdLoaded: (InterstitialAd ad) {
+            ad.fullScreenContentCallback = FullScreenContentCallback(
+                onAdShowedFullScreenContent: (ad) {},
+                onAdImpression: (ad) {},
+                onAdFailedToShowFullScreenContent: (ad, err) {
+                  ad.dispose();
+                },
+                onAdDismissedFullScreenContent: (ad) {
+                  ad.dispose();
+                },
+                onAdClicked: (ad) {});
+
+            _interstitialAd = ad;
+          },
+          onAdFailedToLoad: (LoadAdError error) {
+            print('InterstitialAd failed to load: $error');
+          },
+        ));
+  }
+
+  void _starTimer() {
+    Timer.periodic(const Duration(seconds: 1), (timer) {
+      setState(() => _counter--);
+
+      if (_counter == 0) {
+        _interstitialAd?.show();
+        timer.cancel();
+      }
+    });
+  }
+
+  @override
+  void dispose() {
+    _interstitialAd?.dispose();
+    super.dispose();
+  }
+
+  void go() {
+    setState(() {
+      _interstitialAd?.show();
+    });
+  }
+
+  List<dynamic> _videos = [];
+  bool _isLoading = false;
+
+  @override
+  void initState() {
+    super.initState();
+
+    super.initState();
+    _startNewGame();
+  }
+
+  Future<void> allVideo() async {
+    _isLoading = true;
+    setState(() {
+      _isLoading = true;
+    });
   }
 
   Widget build(BuildContext context) {
