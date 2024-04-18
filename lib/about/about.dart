@@ -103,6 +103,7 @@ InterstitialAd? _interstitialAd;
       child: Padding(
         padding: const EdgeInsets.only(top: 28),
         child: Scaffold(
+
           backgroundColor: Colors.white,
           body: Padding(
             padding: const EdgeInsets.only(top: 0),
