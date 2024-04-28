@@ -24,13 +24,10 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   final CountdownTimer _countdownTimer = CountdownTimer(10);
-  //var _showWatchVideoButton = false;
-  //var _coins = 0;
+
   RewardedAd? _rewardedAd;
 
   final String _adUnitId = Platform.isAndroid
-      //   ? 'ca-app-pub-7329797350611067/4088353663'
-      // : 'ca-app-pub-7329797350611067/4088353663';
 
       ? 'ca-app-pub-7329797350611067/5705114635'
       : 'ca-app-pub-7329797350611067/5705114635';
