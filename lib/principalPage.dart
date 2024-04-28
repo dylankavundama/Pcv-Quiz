@@ -41,7 +41,6 @@ InterstitialAd? _interstitialAd;
   final String _adUnitIdd = Platform.isAndroid
       ? 'ca-app-pub-7329797350611067/8200194655'
       : 'ca-app-pub-7329797350611067/8200194655';
-  @override
   void _startNewGame() {
     setState(() => _counter = _gameLength);
 

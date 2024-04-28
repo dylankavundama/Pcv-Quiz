@@ -188,10 +188,6 @@ class _HomeState extends State<Home> {
     _bannerAd?.dispose();
     super.dispose();
   }
-
-  /// Loads and shows a banner ad.
-  ///
-  /// Dimensions of the ad are determined by the AdSize class.
 }
 
 class AppbarClass extends StatelessWidget {
