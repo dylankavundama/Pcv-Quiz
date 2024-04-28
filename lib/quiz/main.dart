@@ -31,7 +31,6 @@ class _MyAppState extends State<MyApp> {
 
       ? 'ca-app-pub-7329797350611067/5705114635'
       : 'ca-app-pub-7329797350611067/5705114635';
-//Id app ca-app-pub-3940256099942544~3347511713
   @override
   void initState() {
     super.initState();
@@ -39,7 +38,7 @@ class _MyAppState extends State<MyApp> {
     _countdownTimer.addListener(() => setState(() {
           _rewardedAd?.show(
               onUserEarnedReward: (AdWithoutView ad, RewardItem rewardItem) {
-            // ignore: avoid_print
+
           });
         }));
     _startNewGame();
